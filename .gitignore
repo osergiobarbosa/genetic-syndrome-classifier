@@ -1,0 +1,11 @@
+# Ignorar ambiente virtual
+venv/
+env/
+
+# Ignorar arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Ignorar os dados da Apollo Solutions (Privacidade!)
+*.p
+*.pickle

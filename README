@@ -1,0 +1,27 @@
+# Genetic Syndrome Classification - ML Pipeline 🧬
+
+Este repositório contém a resolução de um desafio técnico prático focado na construção de um pipeline de Machine Learning ponta a ponta para a classificação de síndromes genéticas com base em embeddings de imagens (vetores de 320 dimensões).
+
+## 🎯 Objetivo do Projeto
+Desenvolver um fluxo completo de processamento de dados, análise exploratória (t-SNE), modelagem preditiva (KNN) e extração de métricas de avaliação (AUC-ROC, F1-Score, Top-k Accuracy) a partir de dados hierárquicos não estruturados.
+
+## 🛠️ Tecnologias Utilizadas
+* **Linguagem:** Python 3.x
+* **Data Science & ML:** `pandas`, `numpy`, `scikit-learn`
+* **Visualização:** `matplotlib`, `seaborn`
+* **Documentação:** LaTeX
+
+## 📁 Estrutura do Projeto
+O pipeline foi modularizado em scripts independentes para facilitar a manutenção e escalabilidade:
+1. `data_processing.py`: Extração e *flattening* da estrutura de dicionários aninhados (.pickle) para formato tabular bidimensional.
+2. `visualizacao.py`: Redução de dimensionalidade com t-SNE para validação visual dos clusters.
+3. `classificacao_knn.py`: Implementação do K-Nearest Neighbors comparando as distâncias Euclidiana e de Cosseno com 10-Fold Cross-Validation.
+4. `metricas_finais.py`: Cálculo customizado de métricas de performance e geração de Curvas ROC.
+
+## 📄 Relatórios Técnicos (LaTeX)
+Os resultados detalhados, a justificativa matemática para a escolha da Distância de Cosseno em espaços de alta dimensionalidade e a análise de *Bias/Variance* estão disponíveis nos PDFs anexados na raiz do projeto:
+* `Teste_ML.pdf`: Relatório Executivo do Pipeline.
+
+---
+**⚠️ Nota sobre Privacidade de Dados (Zero-Data Leak):**
+*Em conformidade com as melhores práticas de ética e segurança da informação, o dataset original (arquivo `.p` / `.pickle`) contendo os embeddings proprietários **não** foi incluído neste repositório público. O código reflete estritamente a arquitetura da solução e a lógica de negócio.*
